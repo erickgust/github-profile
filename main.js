@@ -13,7 +13,15 @@ async function handleSubmitButton(event) {
   event.preventDefault();
   const $search = event.target.elements.search;
   const json = await getGithubUser($search.value);
-  console.log(json);
+  getGithubUserInfos(json);
+}
+
+function getGithubUserInfos(user) {
+  $avatar.src = user.avatar_url;
+  $name.textContent = user.name;
+  $username.textContent = user.login;
+  $followers.textContent = user.followers;
+  $reposCount.textContent = user.public_repos;
 }
 
 async function getGithubUser(username) {
