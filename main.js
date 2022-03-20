@@ -1,6 +1,10 @@
-import './style.css'
+const $form = getElement('form');
+const $avatar = getElement('avatar');
+const $name = getElement('name');
+const $username = getElement('username');
+const $followers = getElement('followers');
+const $reposCount = getElement('repos');
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+function getElement(elementName) {
+  return document.querySelector(`[data-js="${elementName}"]`);
+}
