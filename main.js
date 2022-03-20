@@ -12,7 +12,13 @@ function getElement(elementName) {
 async function handleSubmitButton(event) {
   event.preventDefault();
   const $search = event.target.elements.search;
-  console.log($search);
+  const json = await getGithubUser($search.value);
+  console.log(json);
+}
+
+async function getGithubUser(username) {
+  const response = await fetch(`https://api.github.com/users/${username}`);
+  return response.json();
 }
 
 $form.addEventListener('submit', handleSubmitButton);
