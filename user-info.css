@@ -1,0 +1,31 @@
+.user-info {
+  flex: 1;
+  font-family: "Lexend Deca", sans-serif;
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 400;
+  align-self: center;
+  line-height: 2;
+}
+
+.user-info > .name {
+  font-size: 36px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.user-info > .name::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  right: 0;
+  background-color: #873EFF;
+  width: 110%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.user-info > .name > span {
+  position: relative;
+  font-weight: 500;
+}
