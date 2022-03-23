@@ -2,15 +2,15 @@
   flex: 1;
   font-family: "Lexend Deca", sans-serif;
   color: #FFF;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   align-self: center;
   line-height: 2;
 }
 
 .user-info > .name {
-  font-size: 36px;
-  margin-bottom: 30px;
+  font-size: 2.25rem;
+  margin-bottom: 1.875rem;
   position: relative;
 }
 
@@ -21,8 +21,8 @@
   right: 0;
   background-color: var(--color-secondary);
   width: 110%;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-left-radius: 3.125rem;
+  border-bottom-left-radius: 3.125rem;
 }
 
 .user-info > .name > span {
