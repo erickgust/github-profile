@@ -1,5 +1,5 @@
 .main-header {
-  background-color: #171228;
+  background-color: var(--color-layer-1);
   padding: 25px;
   height: 100px;
 }

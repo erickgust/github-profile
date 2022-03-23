@@ -19,7 +19,7 @@
   position: absolute;
   height: 100%;
   right: 0;
-  background-color: #873EFF;
+  background-color: var(--color-secondary);
   width: 110%;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;

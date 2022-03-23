@@ -9,8 +9,8 @@
   font-size: 24px;
   color: #FFF;
 
-  background-color: #0E091B;
-  border: 1px solid #04D361;
+  background-color: var(--color-layer-0);
+  border: 1px solid var(--color-primary);
   border-radius: 5px;
   padding: 10px 20px;
 }
@@ -20,7 +20,7 @@
 }
 
 .search-form > .submit {
-  background-color: #04D361;
+  background-color: var(--color-primary);
   border-radius: 5px;
   padding: 10px 20px;
 

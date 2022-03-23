@@ -1,5 +1,5 @@
 .main-content {
-  background-color: #0E091B;
+  background-color: var(--color-layer-0);
   height: calc(100vh - 100px);
   display: grid;
   place-items: center;
