@@ -1,4 +1,5 @@
 const $form = getElement('form');
+const $card = getElement('user-card');
 const $avatar = getElement('avatar');
 const $name = getElement('name');
 const $username = getElement('username');
@@ -9,10 +10,20 @@ function getElement(elementName) {
   return document.querySelector(`[data-js="${elementName}"]`);
 }
 
+function showCard() {
+  $card.style.display = 'flex';
+}
+
 async function handleSubmitButton(event) {
   event.preventDefault();
   const $search = event.target.elements.search;
   const json = await getGithubUser($search.value);
+  showCard();
+
+  if (json.message) {
+    return;
+  }
+
   getGithubUserInfos(json);
 }
 
