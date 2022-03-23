@@ -25,23 +25,16 @@
     </header>
 
     <main class="main-content">
-      <article class="user-card">
+      <article data-js="user-card" class="user-card" style="display: none;">
         <div class="avatar">
           <img data-js="avatar" alt="Imagem de perfil do usuário" class="image">
         </div>
         <div class="user-info">
           <h1 class="name"><span data-js="name"></span></h1>
           <div>
-            <span>Username: </span>
-            <span data-js="username"></span>
-          </div>
-          <div>
-            <span>Followers: </span>
-            <span data-js="followers"></span>
-          </div>
-          <div>
-            <span>Repository count: </span>
-            <span data-js="repos"></span>
+            <p>Username: <span data-js="username"></span></p>
+            <p>Followers: <span data-js="followers"></span></p>
+            <p>Repositories: <span data-js="repos"></span></p>
           </div>
         </div>
       </article>
