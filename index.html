@@ -5,40 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github Profile</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/components/main-header.css">
-    <link rel="stylesheet" href="css/components/search-form.css">
-    <link rel="stylesheet" href="css/components/main-content.css">
-    <link rel="stylesheet" href="css/components/user-card.css">
-    <link rel="stylesheet" href="css/components/user-info.css">
   </head>
   <body>
-    <header class="main-header">
-      <form action="/" data-js="form" class="search-form">
-        <input type="search" placeholder="Github user" name="search" class="search">
-        <button type="submit" class="submit">Search</button>
-      </form>
-    </header>
-
-    <main class="main-content">
-      <article data-js="user-card" class="user-card" style="display: none;">
-        <div class="avatar">
-          <img data-js="avatar" alt="Imagem de perfil do usuário" class="image">
-        </div>
-        <div class="user-info">
-          <h1 class="name"><span data-js="name"></span></h1>
-          <div>
-            <p>Username: <span data-js="username"></span></p>
-            <p>Followers: <span data-js="followers"></span></p>
-            <p>Repositories: <span data-js="repos"></span></p>
-          </div>
-        </div>
-      </article>
-    </main>
-    <script type="module" src="/main.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
