@@ -3,3 +3,7 @@
   padding: 1.5625rem;
   height: 6.25rem;
 }
+
+.main-header > a {
+  float: right;
+}
