@@ -25,7 +25,9 @@
   border-bottom-left-radius: 3.125rem;
 }
 
-.user-info > .name > span {
+.user-info > .name > a {
+  color: inherit;
+  text-decoration: none;
   position: relative;
   font-weight: 500;
 }

@@ -1,9 +1,10 @@
 import './user-card.css';
 import './user-info.css';
 
-type User = {
+export type User = {
   name: string
   user: string
+  url: string
   followers: number
   repos: number
   avatar: string
@@ -14,6 +15,7 @@ function createCard(user: User) {
   const $avatar = createAvatar(user.avatar);
   const $userInfo = createUserInfo(user);
 
+  $article.dataset.js = 'user-card';
   $article.className = 'user-card';
   $article.appendChild($avatar);
   $article.appendChild($userInfo);
@@ -34,26 +36,28 @@ function createAvatar(src: string) {
   return $div;
 }
 
-function createUserName(name: string) {
+function createUserName(name: string, url: string) {
   const $title = document.createElement('h1');
-  const $span = document.createElement('span');
+  const $link = document.createElement('a');
 
-  $span.textContent = name;
+  $link.href = url;
+  $link.target = '_blank';
+  $link.textContent = name;
   $title.className = 'name';
-  $title.appendChild($span);
+  $title.appendChild($link);
 
   return $title;
 }
 
 function createUserInfo({
-  name, user, followers, repos,
+  name, user, followers, repos, url,
 }: Omit<User, 'avatar'>) {
   const $userInfo = document.createElement('div');
   const $div = document.createElement('div');
   const $user = document.createElement('p');
   const $followers = document.createElement('p');
   const $repos = document.createElement('p');
-  const $name = createUserName(name);
+  const $name = createUserName(name, url);
 
   $user.textContent = `Username: ${user}`;
   $followers.textContent = `Followers: ${followers}`;
