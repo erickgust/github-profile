@@ -1,3 +1,6 @@
+import './user-card.css';
+import './user-info.css';
+
 type User = {
   name: string
   user: string
@@ -11,6 +14,7 @@ function createCard(user: User) {
   const $avatar = createAvatar(user.avatar);
   const $userInfo = createUserInfo(user);
 
+  $article.className = 'user-card';
   $article.appendChild($avatar);
   $article.appendChild($userInfo);
 
@@ -32,8 +36,12 @@ function createAvatar(src: string) {
 
 function createUserName(name: string) {
   const $title = document.createElement('h1');
-  $title.textContent = name;
+  const $span = document.createElement('span');
+
+  $span.textContent = name;
   $title.className = 'name';
+  $title.appendChild($span);
+
   return $title;
 }
 
@@ -50,7 +58,7 @@ function createUserInfo({
   $user.textContent = `Username: ${user}`;
   $followers.textContent = `Followers: ${followers}`;
   $repos.textContent = `Repositories: ${repos}`;
-  $userInfo.className = 'user-card';
+  $userInfo.className = 'user-info';
 
   $div.append($user, $followers, $repos);
   $userInfo.append($name, $div);

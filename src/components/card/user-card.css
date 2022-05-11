@@ -1,0 +1,23 @@
+.user-card {
+  border-radius: 0.625rem;
+  border: 1px solid var(--color-secondary);
+  background-color: var(--color-layer-1);
+  display: flex;
+  padding: 3.125rem 0;
+  max-width: 50vw;
+  min-width: 16.25rem;
+  width: 100%;
+}
+
+.user-card > .avatar {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.user-card > .avatar > .image {
+  max-width: 16.25rem;
+  width: 100%;
+  border-radius: 100%;
+  border: 2px solid var(--color-primary);
+}

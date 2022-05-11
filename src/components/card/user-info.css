@@ -1,0 +1,31 @@
+.user-info {
+  flex: 1;
+  font-family: "Lexend Deca", sans-serif;
+  color: #FFF;
+  font-size: clamp(1.125rem, 0.9737rem + 0.5848vw, 1.5rem);
+  font-weight: 400;
+  align-self: center;
+  line-height: 2;
+}
+
+.user-info > .name {
+  font-size: clamp(1.375rem, 1.0219rem + 1.3645vw, 2.25rem);
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+
+.user-info > .name::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  right: 0;
+  background-color: var(--color-secondary);
+  width: 110%;
+  border-top-left-radius: 3.125rem;
+  border-bottom-left-radius: 3.125rem;
+}
+
+.user-info > .name > span {
+  position: relative;
+  font-weight: 500;
+}
