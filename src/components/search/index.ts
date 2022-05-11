@@ -34,4 +34,6 @@ function searchButton() {
   return button;
 }
 
-export default createSearch;
+const Search = createSearch();
+
+export default Search;
