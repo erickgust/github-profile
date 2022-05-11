@@ -1,0 +1,6 @@
+.main-content {
+  background-color: var(--color-layer-0);
+  height: calc(100vh - 6.25rem);
+  display: grid;
+  place-items: center;
+}
