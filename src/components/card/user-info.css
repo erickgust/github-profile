@@ -1,5 +1,5 @@
 .user-info {
-  flex: 1;
+  flex: 8;
   font-family: "Lexend Deca", sans-serif;
   color: #FFF;
   font-size: clamp(1.125rem, 0.9737rem + 0.5848vw, 1.5rem);
@@ -21,8 +21,8 @@
   right: 0;
   background-color: var(--color-secondary);
   width: 110%;
-  border-top-left-radius: 3.125rem;
-  border-bottom-left-radius: 3.125rem;
+  border-top-left-radius: 100vh;
+  border-bottom-left-radius: 100vh;
 }
 
 .user-info > .name > a {
@@ -30,4 +30,39 @@
   text-decoration: none;
   position: relative;
   font-weight: 500;
+}
+
+@media screen and (max-width: 650px) {
+  .user-info > .name {
+    margin: 0;
+    overflow-wrap: break-word;
+    background-color: var(--color-secondary);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem;
+  }
+
+  .user-info > .name::before {
+    content: none;
+  }
+
+  .user-info > .name > a {
+    display: block;
+    width: calc(100% - 4rem);
+    line-height: 1.15;
+  }
+
+  .user-info > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin: 1.25rem 0.625rem;
+  }
+
+  .user-info > div > p {
+    background-color: #211938;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
 }

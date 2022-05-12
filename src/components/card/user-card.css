@@ -4,15 +4,15 @@
   background-color: var(--color-layer-1);
   display: flex;
   padding: 3.125rem 0;
-  max-width: 50vw;
+  max-width: calc(50vw + 10rem);
   min-width: 16.25rem;
   width: 100%;
 }
 
 .user-card > .avatar {
-  flex: 1;
-  text-align: center;
-  padding: 0 1rem;
+  flex: 7;
+  place-self: center;
+  padding: 0 1.5rem;
 }
 
 .user-card > .avatar > .image {
@@ -20,4 +20,27 @@
   width: 100%;
   border-radius: 100%;
   border: 2px solid var(--color-primary);
+}
+
+@media screen and (max-width: 650px) {
+  .user-card {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .user-card > .avatar {
+    position: absolute;
+    padding: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0.625rem;
+  }
+
+  .user-card > .avatar > .image {
+    border-radius: 5px;
+    max-width: 3.75rem;
+    width: 100%;
+  }
 }

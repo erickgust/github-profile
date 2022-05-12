@@ -35,3 +35,13 @@
 .search-form > .submit:hover {
   filter: brightness(0.85);
 }
+
+@media screen and (max-width: 480px) {
+  .search-form > .search {
+    width: 100%;
+  }
+
+  .search-form > .submit {
+    display: none;
+  }
+}

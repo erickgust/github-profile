@@ -7,3 +7,9 @@
 .main-header > a {
   float: right;
 }
+
+@media screen and (max-width: 600px) {
+  .main-header > a {
+    display: none;
+  }
+}
