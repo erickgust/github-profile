@@ -2,6 +2,9 @@
   "name": "github-profile",
   "private": true,
   "version": "0.0.0",
+  "author": "Erick Gustavo",
+  "license": "MIT",
+  "description": "An application that shows basic information from a GitHub user",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
