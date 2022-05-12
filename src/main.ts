@@ -1,5 +1,5 @@
 import './css/reset.css';
-import './css/colors.css';
+import './css/base.css';
 import Search from './components/search';
 import Header from './components/header';
 import Main from './components/main';
